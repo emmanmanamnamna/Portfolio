@@ -1,123 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L.E.M.V. — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <a href="#home" class="nav-logo">Lloyd Emman</a>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- ─── Custom Cursor ──────────────────────────────────────── -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ─── Mobile Menu Overlay ───────────────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
+    <ul>
+      <li><a href="#about"    class="mobile-link">About</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#contact"  class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ─── Navigation ────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">L.E.M.V<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="mailto:lloydemmanv@gmail.com" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── Hero Section ──────────────────────────────────────── -->
+  <section id="home">
+    <div class="hero-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Available for opportunities</div>
+
+      <h1 class="hero-title">
+        <span class="line"><span>Full-Stack</span></span>
+        <span class="line"><span class="gradient-text">Developer</span></span>
+        <span class="line"><span>&amp; Problem Solver.</span></span>
+      </h1>
+
+      <p class="hero-terminal">
+        <span class="prompt"> </span>I am a <span id="typed-text"></span>
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact"  class="btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── Marquee Strip ─────────────────────────────────────── -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span>Full-Stack Dev</span><span class="dot">✦</span>
+      <span>React &amp; Node.js</span><span class="dot">✦</span>
+      <span>Python Django</span><span class="dot">✦</span>
+      <span>Flutter &amp; Dart</span><span class="dot">✦</span>
+      <span>SQL / NoSQL</span><span class="dot">✦</span>
+      <span>RESTful APIs</span><span class="dot">✦</span>
+      <span>UI / UX Minded</span><span class="dot">✦</span>
+      <span>Full-Stack Dev</span><span class="dot">✦</span>
+      <span>React &amp; Node.js</span><span class="dot">✦</span>
+      <span>Python Django</span><span class="dot">✦</span>
+      <span>Flutter &amp; Dart</span><span class="dot">✦</span>
+      <span>SQL / NoSQL</span><span class="dot">✦</span>
+      <span>RESTful APIs</span><span class="dot">✦</span>
+      <span>UI / UX Minded</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ─── About Section ─────────────────────────────────────── -->
+  <section id="about">
+    <div class="about-wrap">
+
+      <div class="about-image-wrap reveal">
+        <div class="about-image-inner">
+          <img
+            src="image/emman.png"
+            alt="Lloyd Emman"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="avatar-fallback">👨‍💻</div>
         </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hello, I'm Lloyd Emman.</h1>
-                <div class="terminal-container">
-                    <span class="terminal-prompt">> I am a </span>
-                    <span id="typing-text" class="typing-effect"></span>
-                </div>
-            </div>
+        <div class="about-badge">
+          <span class="big">IT</span>
+          Undergrad<br>Student
         </div>
-    </section>
+      </div>
 
-    <section id="about" class="content-section">
-        <div class="container about-flex-container"> <div class="about-text-content">
-                <h2>// About Me</h2>
-                <p>I am a frontend-focused developer with experience in mobile and web development. I have working knowledge of backend development, enabling effective system integration, as well as experience in technical documentation.</p>
-                <p>I am skilled in using tools such as Power BI, Excel, Adobe Premiere Pro, Figma, and Canva for data visualization, design, and content creation, and I continuously seek to enhance my technical and professional skills.</p>
-            </div>
-            <div class="about-image-container">
-                <img src="image/pfp.png" alt="Lloyd Emman Profile Picture" class="profile-pic"> </div>
+      <div class="about-text">
+        <div class="section-label reveal">01 — About</div>
+        <h2 class="section-title reveal reveal-delay-1">Crafting digital<br>experiences.</h2>
+        <p class="reveal reveal-delay-2">
+          I'm <strong>Lloyd Emman Virrey</strong>, a full-stack developer passionate about building
+          clean, efficient, and user-friendly web applications. I love solving complex problems and
+          turning ideas into reality — from the database layer all the way up to the UI.
+        </p>
+        <p class="reveal reveal-delay-3">
+          Whether it's a sleek frontend interface or a robust backend system, I bring the same
+          level of care and precision to every layer of the stack.
+        </p>
+        <div class="skill-tags reveal reveal-delay-4">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">Flutter(Dart)</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Firebase</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">VB.NET</span>
+          <span class="skill-tag">RESTful APIs</span>
         </div>
-    </section>
+      </div>
 
-    <section id="projects" class="content-section">
-        <div class="container">
-            <h2>// My Work</h2>
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    <img src="image/aboutme.png" alt="Project 1 Screenshot">
-                    <h3>About Me Website</h3>
-                    <p>A fan-driven informational website dedicated to Mobile Suit Gundam: The Witch from Mercury, built using HTML, CSS, and modern responsive design principles. 
-                        The platform showcases character profiles, story overviews, mobile suit details, and series highlights, giving visitors a clear and 
-                        engaging introduction to the world of Suletta Mercury and the Aerial.</p>
-                </div>
+    </div>
+  </section>
 
-                <div class="project-card">
-                    <img src="image/oneClick.png" alt="Project 2 Screenshot">
-                    <h3>ONE CLICK – A COMPUTER MONITOTING SYSTEM </h3>
-                    <p> ONE CLICK is a full-stack PC monitoring application built using VB.NET for the front-end and code logic, and Microsoft Access as the back-end database. 
-                        The system supports real-time status display, time logs, and admin authentication, offering a practical solution for managing multiple computer units in computer shops. </p>
-                </div>
+  <!-- ─── Projects Section ──────────────────────────────────── -->
+  <section id="projects">
+    <div class="projects-header">
+      <div class="section-label reveal">02 — Work</div>
+      <h2 class="section-title reveal reveal-delay-1">Selected Projects</h2>
+    </div>
 
-                <div class="project-card">
-                    <img src="image/timeless.png" alt="Project 3 Screenshot">
-                    <h3>TIMELESS APPAREL E-COMMERCE WEBSITE </h3>
-                    <p>I participated in this project as an Assistant Developer for an e-commerce platform specializing in clothing retail. 
-                        The website is built with HTML, CSS, and JavaScript on the frontend, and PHP with MySQL for backend operations. It offers a complete online shopping experience, 
-                        including product browsing, shopping cart functionality, checkout, and order management—providing a smooth and efficient purchasing experience for fashion customers.</p>
-                </div>
+    <div class="project-grid">
 
-                <div class="project-card">
-                    <img src="image/LLJ.png" alt="Project 4 Screenshot">
-                    <h3>LLJ MotorShop WEBSITE</h3>
-                    <p>An inventory management system built with HTML, JavaScript, PHP, and MySQL. 
-                        The web application enables efficient tracking and management of motorcycle parts inventory with barcode scanning capabilities, 
-                        allowing for quick product identification, real-time stock level monitoring, and streamlined inventory operations for motorcycle parts retail.</p>
-                </div>
-
-                <div class="project-card">
-                    <img src="image/kinpo.png" alt="Project 5 Screenshot">
-                    <h3>EMPLOYEE ATTENDANCE MANAGEMENT OF KINPO INCORPORATED</h3>
-                    <p>An employee attendance management system built with VB.NET and XAMPP. 
-                        The application allows quick recording and monitoring of employee attendance, featuring automated data input, real-time status updates, 
-                        and an organized table view for tracking present or absent employees. Designed to streamline daily attendance operations for Kinpo Incorporated. </p>
-                </div>
-
-                <div class="project-card">
-                    <img src="image/mamas.png" alt="Project 6 Screenshot">
-                    <h3>MAMA’S RECIPE</h3>
-                    <p>A PERSONALIZED AND CUSTOMIZABLE MEAL PLANNER AND DIETITIAN ADVISORY APPLICATION.<b> 
-                        The system is developed using Flutter and the Dart programming language for building both the mobile application and the web-based admin platform. 
-                        The backend is powered by Firebase, utilizing Firebase Authentication for secure login, Firestore Database for real-time data storage and synchronization, 
-                        Firebase Storage for meal plan media, and Firebase Cloud Messaging for system notifications. This combination provides a scalable, cross-platform, 
-                        and real-time architecture that enables seamless interaction between users, dietitians, and administrators.</p>
-                </div>
-
-            </div>
+      <div class="project-card featured reveal">
+        <div class="project-img-wrap">
+          <img class="project-img" src="image/mamas.png" alt="Mama's Recipe"
+               onerror="this.parentElement.classList.add('img-fallback')">
         </div>
-    </section>
-
-    <section id="contact" class="content-section">
-        <div class="container">
-            <h2>// Get In Touch</h2>
-            <p>I'm currently open to new opportunities. Whether you have a project in mind or just want to say hi, feel free to reach out!</p>
-            <a href="mailto:lloydemmanv@gmail.com" class="cta-button">Email Me</a>
+        <div class="project-body">
+          <span class="project-num">01 — Featured</span>
+          <div class="project-title">Mama's Recipe — Meal Planner App</div>
+          <p class="project-desc">A personalized and customizable meal planner and dietitian advisory application. Built with Flutter &amp; Dart for cross-platform mobile and web, powered by Firebase for real-time data, authentication, and cloud messaging.</p>
+          <div class="project-tags">
+            <span class="project-tag">Flutter</span>
+            <span class="project-tag">Dart</span>
+            <span class="project-tag">Firebase</span>
+            <span class="project-tag">Cross-Platform</span>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Virrey, Lloyd Emman M. Built with HTML, CSS, and vanilla JS.</p>
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-img-wrap">
+          <img class="project-img" src="image/timeless.png" alt="Timeless Apparel"
+               onerror="this.parentElement.classList.add('img-fallback')">
         </div>
-    </footer>
+        <div class="project-body">
+          <span class="project-num">02</span>
+          <div class="project-title">Timeless Apparel E-Commerce</div>
+          <p class="project-desc">Full-featured online clothing store with cart, checkout, and order management. Built as Assistant Developer using HTML/CSS/JS + PHP &amp; MySQL.</p>
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-img-wrap">
+          <img class="project-img" src="image/LLJ.png" alt="LLJ MotorShop"
+               onerror="this.parentElement.classList.add('img-fallback')">
+        </div>
+        <div class="project-body">
+          <span class="project-num">03</span>
+          <div class="project-title">LLJ MotorShop Inventory System</div>
+          <p class="project-desc">Barcode-powered inventory management for motorcycle parts with real-time stock monitoring. Built with HTML, JS, PHP &amp; MySQL.</p>
+          <div class="project-tags">
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">Barcode</span>
+            <span class="project-tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-img-wrap">
+          <img class="project-img" src="image/oneClick.png" alt="ONE CLICK"
+               onerror="this.parentElement.classList.add('img-fallback')">
+        </div>
+        <div class="project-body">
+          <span class="project-num">04</span>
+          <div class="project-title">ONE CLICK — PC Monitoring System</div>
+          <p class="project-desc">Full-stack desktop app for managing computer shop units with real-time status, time logs, and admin auth. VB.NET + MS Access.</p>
+          <div class="project-tags">
+            <span class="project-tag">VB.NET</span>
+            <span class="project-tag">MS Access</span>
+            <span class="project-tag">Desktop</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-img-wrap">
+          <img class="project-img" src="image/kinpo.png" alt="Kinpo Attendance"
+               onerror="this.parentElement.classList.add('img-fallback')">
+        </div>
+        <div class="project-body">
+          <span class="project-num">05</span>
+          <div class="project-title">Kinpo Inc. Attendance System</div>
+          <p class="project-desc">Employee attendance tracker with automated data input, real-time status, and organized table views. VB.NET + XAMPP.</p>
+          <div class="project-tags">
+            <span class="project-tag">VB.NET</span>
+            <span class="project-tag">XAMPP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-3">
+        <div class="project-img-wrap">
+          <img class="project-img" src="image/aboutme.png" alt="Gundam Website"
+               onerror="this.parentElement.classList.add('img-fallback')">
+        </div>
+        <div class="project-body">
+          <span class="project-num">06</span>
+          <div class="project-title">Gundam Info Website</div>
+          <p class="project-desc">Fan-driven informational site for Mobile Suit Gundam: The Witch from Mercury — character profiles, story arcs, and mobile suit specs. Pure HTML/CSS.</p>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">Responsive</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Contact Section ───────────────────────────────────── -->
+  <section id="contact">
+    <div class="contact-wrap">
+      <div class="section-label reveal">03 — Contact</div>
+      <h2 class="contact-mega reveal reveal-delay-1">
+        Let's<br><span class="ghost">Build</span><br>Together.
+      </h2>
+      <p class="reveal reveal-delay-2">
+        I'm currently open to new opportunities. Whether you have a project in mind or
+        just want to say hello, my inbox is always open.
+      </p>
+      <span class="contact-email reveal reveal-delay-2">
+  lloydemmanv@gmail.com
+</span>
+      <div class="contact-actions reveal reveal-delay-3">
+        <a href="mailto:lloydemmanv@gmail.com" class="btn-primary">Click to Copy Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer>
+    <p>© 2026 Virrey, Lloyd Emman M. — Built with HTML, CSS &amp; Vanilla JS.</p>
+    <div class="footer-dot" title="Available for work"></div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
